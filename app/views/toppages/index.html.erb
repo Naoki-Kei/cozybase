@@ -1,0 +1,26 @@
+<% if logged_in? %>
+  <div class="row">
+    <div class="toparea">
+      <p>みんなのリアルな家の働き方・働く場所のSNS自分のお気に入りの働く場所、工夫を共有して自分の空間をさらにカスタマイズしよう！</p>
+    </div>
+    
+    <aside class="col-sm-4">
+      <%= form_with(model: @post, local: true) do |f| %>
+        <div class="form-group">
+          <%= f.text_area :self_comment, class: 'form-control', rows: 5 %>
+        </div>
+        <%= f.submit 'Post', class: 'btn btn-primary btn-block' %>
+      <% end %>
+    </aside>
+    <div class="col-sm-8">
+      <%= render 'posts/posts', posts: @posts %>
+    </div>
+  </div>
+<% else %>
+  <div class="center jumbotron">
+    <div class="text-center">
+      <h1>Welcome to the CosyBase</h1>
+      <%= link_to 'Sign up now!', signup_path, class: 'btn btn-lg btn-primary' %>
+    </div>
+  </div>
+<% end %>
