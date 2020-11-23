@@ -1,15 +1,29 @@
-<h1>Showのページ</h1>
-<!--<p id="notice"><%= notice %></p>-->
-
-<p>
-画像
-  <%=  @post.image.url if @post.image? %></p>
-  <%= image_tag @post.image.url if @post.image? %>
+<h1>Posts>Show.htmlのページ</h1>
+<!--<p id="notice"><%= notice %></p>--><div class="toparea">
+     
+    </div>
+<div id="wrapper">
+<div class="main">
+  <div class="eachpostimg"><%= image_tag @post.image.url if @post.image? %></div>
+  <div class="postcommnet userimgflex">
+  
+  <div class="userimg mainuserimg"><img class="grav" src="<%= gravatar_url(@post.user) %>" ></div>
+  <div class="commentarea">
   <p><%= @post.self_comment %></p>
+  </div>
+  </div>
+  
+</div>
+<div class="aside">
+  ユーザの名前(どうやって取得する？）
+  
+</div>
 
-</p>
+ 
+</div>
 
 
-
+<div>
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
+</div>

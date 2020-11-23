@@ -1,0 +1,152 @@
+@charset "utf-8";
+
+
+a{color:#06f;text-decoration: none;}
+a:hover .alpha {filter: alpha(opacity=80);opacity: 0.80;-moz-opacity: 0.80;}
+ul,li{list-style:none;}
+img{vertical-align:middle;border:none;}
+img{max-width: 100%}
+img{width: auto;}
+.imgborder{border: 1px solid #ccc;}
+html{
+  font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 100%;
+  color: #333;
+  line-height: 1.5;
+}
+
+.topimage{
+    max-width: 160rem;
+    height: 10rem;
+    margin: 0 auto;
+    background-image: url("webtopbg.jpg") ;
+    background-size: cover;
+    position:relative
+    
+}
+
+.topimage p{
+  position: absolute;
+  font-weight: bold; /*太字に*/
+  font-size: 1.2em;/*サイズ2倍*/
+  font-family :Quicksand, sans-serif;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+    
+}
+
+
+
+
+.grav{
+    width: 25px;
+    height: 25px;
+    border-radius: 13px;
+    margin-left: 10px;
+    margin-top: 5px;
+    border: 2px solid #675e5e;
+    
+}
+
+.comment{
+    margin-left: 10px;
+    color: #675e5e;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.username{margin:8px;}
+
+.img {
+    width:200px;
+    height:200px;
+    border-radius: .8rem .8rem 0 0;
+}
+.card{
+    height: 300px;
+    width: 200px;
+    border-radius: .8rem;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0.2rem 0.4rem 0 rgba(0,0,0,.16);
+    box-shadow: 0 0.2rem 0.4rem 0 rgba(0,0,0,.16);
+    text-decoration: none;
+    margin-top:20px;
+}
+
+.flex{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.wrapitem{width:920px;}
+
+/*ページ共通*/
+.pagetitle{
+    font:bold;
+    text-align:center;
+    margin-top:30px;
+}
+
+/*user周り*/
+.usersetting{margin-top:20px;}
+.postimg{  width:200px;
+    height:200px;}
+    
+    
+/*投稿周り*/
+#wrapper {
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+}
+.main{
+    width:60%;
+    background-color: #ddffdd;
+}
+.aside{
+    width:30%;
+    background-color: #ffddff;
+
+}
+
+.eachpostimg{
+    width:400px;
+    height:400px;
+    padding:30px;
+    border-radius:8px;
+    margin:auto
+
+}
+.eachpostimg img{
+    border-radius:10px;
+}
+
+.commentarea{
+    width:40%;
+    height:100px;
+    background-color:#fff;
+    border:solid 2px #675e5e;
+}
+
+.userimgflex{
+    display: flex;
+    justify-content: space-around;
+}
+
+.mainuserimg{
+    width:10%;
+}
+.commentarea{
+    width:80%;
+    border-radius: 14px;
+}
+
+.commentarea p{margin-left:10px;}
