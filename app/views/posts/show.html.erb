@@ -1,0 +1,15 @@
+<h1>Showのページ</h1>
+<!--<p id="notice"><%= notice %></p>-->
+
+<p>
+画像
+  <%=  @post.image.url if @post.image? %></p>
+  <%= image_tag @post.image.url if @post.image? %>
+  <p><%= @post.self_comment %></p>
+
+</p>
+
+
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>

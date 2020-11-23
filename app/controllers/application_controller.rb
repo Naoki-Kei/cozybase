@@ -15,6 +15,7 @@ private
     @count_posts = user.posts.count
     @count_followings = user.followings.count
     @count_followers = user.followers.count
+    @count_likeposts = user.likeposts.count
   end
   
     

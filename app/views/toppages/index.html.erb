@@ -3,16 +3,10 @@
     <div class="toparea">
       <p>みんなのリアルな家の働き方・働く場所のSNS自分のお気に入りの働く場所、工夫を共有して自分の空間をさらにカスタマイズしよう！</p>
     </div>
-    
-    <aside class="col-sm-4">
-      <%= form_with(model: @post, local: true) do |f| %>
-        <div class="form-group">
-          <%= f.text_area :self_comment, class: 'form-control', rows: 5 %>
-        </div>
-        <%= f.submit 'Post', class: 'btn btn-primary btn-block' %>
-      <% end %>
-    </aside>
+   <%= image_tag @post.image.url if @post.image? %>
     <div class="col-sm-8">
+      
+     
       <%= render 'posts/posts', posts: @posts %>
     </div>
   </div>
