@@ -19,7 +19,7 @@ html{
     max-width: 160rem;
     height: 10rem;
     margin: 0 auto;
-    background-image: url("webtopbg.jpg") ;
+    background-image: image-url("webtopbg.jpg") ; ;
     background-size: cover;
     position:relative
     
@@ -97,8 +97,8 @@ html{
 
 /*user周り*/
 .usersetting{margin-top:20px;}
-.postimg{  width:200px;
-    height:200px;}
+/*.postimg{  width:200px;*/
+/*    height:200px;}*/
     
     
 /*投稿周り*/
@@ -151,3 +151,11 @@ html{
 
 .commentarea p{margin-left:10px;}
 
+.selfpostomg{
+    width:200px;
+    height:200px;
+}
+
+.selful{
+    display:flex;
+}
