@@ -3,6 +3,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.order(id: :desc).page(params[:page]).per(25)
+  
   end
 
   def show
@@ -13,11 +14,13 @@ class UsersController < ApplicationController
   
   def edit
     @user = User.find(params[:id])
+
   end
 
 
   def new
     @user = User.new
+    
   end
 
   def create
@@ -31,6 +34,27 @@ class UsersController < ApplicationController
       render :new
     end
     
+  end
+  
+  def update
+    @user = User.find(params[:id])
+ 
+  #編集しようとしてるユーザーがログインユーザーとイコールかをチェック
+  if current_user == @user
+   
+    if @user.update(user_params)
+      flash[:success] = 'ユーザー情報を編集しました。'
+      render :edit
+    else
+      flash.now[:danger] = 'ユーザー情報の編集に失敗しました。'
+      render :edit
+    end   
+   
+  else
+      redirect_to root_url
+  end
+   
+ 
   end
   
   def followings
@@ -56,6 +80,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation,:comment)
   end
 end

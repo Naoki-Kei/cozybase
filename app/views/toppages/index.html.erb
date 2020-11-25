@@ -1,14 +1,13 @@
 <% if logged_in? %>
   <div class="row">
-    <div class="toparea">
-     
-    </div>
-   <%= image_tag @post.image.url if @post.image? %>
+    <div class="toparea"></div>
+
     <div class="col-sm-8">
       
      
       <!--<%= render 'posts/posts', posts: @posts %>-->
       <%= render 'posts/top', posts: @posts %>
+
       
     </div>
   </div>
@@ -20,3 +19,4 @@
     </div>
   </div>
 <% end %>
+
