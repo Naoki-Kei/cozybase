@@ -9,7 +9,8 @@
       <!--<%= render 'posts/posts', posts: @posts %>-->
       <%= render 'posts/top', posts: @posts %>
 
-
+<div class="pagechange">
+<%= paginate @posts %></div>
 
     </div>
  
@@ -21,7 +22,6 @@
       <%= link_to 'Sign up now!', signup_path, class: 'btn btn-lg btn-primary' %>
     </div>
   </div>
+
+
 <% end %>
-<div class="pagechange">
-<%= paginate @posts %>
-</div>
