@@ -21,5 +21,12 @@
 
     </ul>
     <div class="postimg"><%= render 'posts/posts', posts: @posts %></div>
+  
+<div class="pagechange">
+<%= paginate @posts %>
+</div>
+
+
   </div>
 </div>
+

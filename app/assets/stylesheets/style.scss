@@ -15,6 +15,12 @@ html{
   line-height: 1.5;
 }
 
+
+.btn-edit{
+    font-color:#fff;
+}
+
+
 .topimage{
     max-width: 160rem;
     height: 10rem;
@@ -295,7 +301,34 @@ html{
     margin-top:5px;
 }
 
-@media (min-width: 576px)
- {
+.main-edit{
+    width:100%;
+    background-color: #ccc;
+    margin-bottom:30px;
+    padding:20px;
+}
 
+.commentarea-edit{
+    width:500px;
+    height:100px;
+    background-color:#fff;
+    border:solid 2px #675e5e;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin:0 auto;
+}
+
+.main-edit p{
+    text-align:left;
+}
+
+/*ページネーション自体のデザイン*/
+.pagechange{
+    margin-top:15px;
+}
+
+/*ホバー時のデザイン*/
+.pagination>li>a:hover {        
+  border-radius: 15px;    /*角を丸くする*/
 }

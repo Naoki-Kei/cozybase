@@ -1,6 +1,22 @@
-<h1>Editing Post</h1>
+<div class="pagewrap">
+<div class="pagetitle"><h1>投稿編集画面</h1></div>
 
 <%= render 'form', post: @post %>
 
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', posts_path %>
+<div class="pagetitle"><h2>現在の投稿画面</h2>
+<div class="main-edit">
+  <div class="eachpostimg"><%= image_tag @post.image.url if @post.image? %>
+  </div>
+  <div class="postcommnet userimgflex">
+  
+  <div class="userimg mainuserimg"><img class="grav" src="<%= gravatar_url(@post.user) %>" >
+  <%= link_to @post.user.name, user_path(@post.user) %>
+  </div>
+  <div class="commentarea-edit">
+  <p><%= @post.self_comment %></p>
+  </div>
+  </div>
+  
+</div>
+| <%= link_to '編集前画面に戻る', @post %> |
+</div>

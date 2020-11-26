@@ -1,7 +1,6 @@
 <h1>Posts>Show.htmlのページ</h1>
-<!--<p id="notice"><%= notice %></p>--><div class="toparea">
-     
-    </div>
+<!--<p id="notice"><%= notice %></p>-->
+<div class="toparea"></div>
 <div id="wrapper">
 <div class="main">
   <div class="eachpostimg"><%= image_tag @post.image.url if @post.image? %>
@@ -10,6 +9,13 @@
   
   <div class="userimg mainuserimg"><img class="grav" src="<%= gravatar_url(@post.user) %>" >
   <%= link_to @post.user.name, user_path(@post.user) %>
+  <!--ログインユーザのみ投稿の編集可能-->
+  <div class="btn btn-sm btn-light btn-edit">
+  <% if current_user == @post.user %>
+    <%= link_to 'Edit', edit_post_path(@post) %> 
+  <% end %>
+  </div>
+  <!--ログインユーザのみ投稿編集可能終了-->
   </div>
   <div class="commentarea">
   <p><%= @post.self_comment %></p>
@@ -24,6 +30,7 @@
 <img class="postuserphoto" src="<%= gravatar_url(@post.user) %>" ></div>
 <%= link_to @post.user.name, user_path(@post.user) %>
 
+
 </tr>
 <tr>
 <td>
@@ -32,11 +39,7 @@
 </table>
 </div>
 
- 
+
 </div>
 
 
-<div>
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
-</div>

@@ -2,14 +2,17 @@
   <div class="row">
     <div class="toparea"></div>
 
+
     <div class="col-sm-8">
       
      
       <!--<%= render 'posts/posts', posts: @posts %>-->
       <%= render 'posts/top', posts: @posts %>
 
-      
+
+
     </div>
+ 
   </div>
 <% else %>
   <div class="center jumbotron">
@@ -19,4 +22,6 @@
     </div>
   </div>
 <% end %>
-
+<div class="pagechange">
+<%= paginate @posts %>
+</div>
