@@ -64,7 +64,7 @@ html{
 .username{margin:8px;}
 
 .img {
-    width:200px;
+    width:187px;
     height:200px;
     border-radius: .8rem .8rem 0 0;
 }
@@ -77,16 +77,46 @@ html{
     box-shadow: 0 0.2rem 0.4rem 0 rgba(0,0,0,.16);
     text-decoration: none;
     margin-top:20px;
+    padding:5px;
 }
 
 .flex{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+
 }
 
-.wrapitem{width:920px;}
+/*トップページ _top.html*/
+.wrapitem{
+    display: flex;
+    justify-content: space-between;
+    width: 840px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap:wrap;
+}
+
+.top-list{
+    width:calc(25% - 5px);
+    background-position: center top;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+
+.wrapitem::after{
+    content:"";
+    display: block;
+    width:calc(25% - 5px);
+}
+
+.wrapitem::before{
+    order:1;
+    content:"";
+    display: block;
+    width:calc(25% - 5px);
+}
+
+
+
 
 /*ページ共通*/
 .pagetitle{
@@ -134,6 +164,9 @@ html{
     height:100px;
     background-color:#fff;
     border:solid 2px #675e5e;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .userimgflex{
@@ -151,11 +184,118 @@ html{
 
 .commentarea p{margin-left:10px;}
 
+
+.postuserphoto{
+    width:50px;
+    height:50px
+    
+}
+.postintroarea{
+    height:100px;
+    background-color:#fff;
+    border:solid 2px #675e5e;
+    border-radius: 14px;
+    padding:10px;
+}
+
+
 .selfpostomg{
     width:200px;
     height:200px;
 }
 
+
+.selpwrap{
+    // width:840px;
+    // justify-content: space-between;
+    // margin-left: auto;
+    // margin-right: auto;
+}
+
+
+
 .selful{
+    display: flex;
+    justify-content: space-between;
+    width: 840px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap:wrap;
+}
+
+.post-list{
+    width:calc(25% - 5px);
+    background-position: center top;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.selful::after{
+    content:"";
+    display: block;
+    width:calc(25% - 5px);
+}
+
+.selful::before{
+    order:1;
+    content:"";
+    display: block;
+    width:calc(25% - 5px);
+}
+
+
+
+
+.selfpostcomment{
+    height:150px;
+    width:200px;
+    background-color:#fff;
+    border:solid 2px #675e5e;
+    border-radius:5px;
+    box-shadow: 0 0.2rem 0.4rem 0 rgba(0,0,0,.16);
+    text-decoration: none;
+    margin-top:10px;
+    padding:10px;
+
+}
+.btnpostion{
+    margin-top:5px;
+    margin-right:5px;
     display:flex;
+}
+
+/*プロフィール*/
+.contentwrap{
+    margin:0 auto;
+    width:800px;
+}
+
+
+.usercard{
+    height:250px;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    -webkit-box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.16);
+    box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.16);
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .8rem;
+    margin-top: 20px;
+    margin-bottom:20px;
+    padding: 5px;
+}
+
+.cardcomment{
+    margin-top:5px;
+}
+
+@media (min-width: 576px)
+ {
+
 }
