@@ -153,6 +153,12 @@ html{
 
 }
 
+.post-follow{
+    margin-top:10px;
+
+}
+
+
 .eachpostimg{
     width:400px;
     height:400px;
@@ -172,7 +178,7 @@ html{
     border:solid 2px #675e5e;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
+    // white-space: nowrap;
 }
 
 .userimgflex{
@@ -188,7 +194,7 @@ html{
     border-radius: 14px;
 }
 
-.commentarea p{margin-left:10px;}
+.commentarea p{margin:10px;}
 
 
 .postuserphoto{
