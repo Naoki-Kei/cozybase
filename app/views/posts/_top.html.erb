@@ -1,11 +1,11 @@
 <div class="toparea">
 </div>
 
-<div class="wrapitem">
+<div class="row wrapitem">
 
   <% @posts.each do |post| %>
-        <div class="items card top-list">
-          <div class ="img"><%= link_to (image_tag post.image.url if post.image?), post_path(post.id) %></div>
+        <div class="card">
+          <div class="topimg"><%= link_to (image_tag post.image.url if post.image?), post_path(post.id) %></div>
           <div class="userimg"><img class="grav" src="<%= gravatar_url(post.user) %>" ></div>
           <div class="username"><%= link_to post.user.name, user_path(post.user) %></div> 
           <div class="comment"><%= post.self_comment %></div>

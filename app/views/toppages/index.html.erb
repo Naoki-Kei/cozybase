@@ -1,20 +1,17 @@
 <% if logged_in? %>
-  <div class="row">
     <div class="toparea"></div>
 
 
-    <div class="col-sm-8">
+    <div>
       
      
       <!--<%= render 'posts/posts', posts: @posts %>-->
       <%= render 'posts/top', posts: @posts %>
 
-<div class="pagechange">
-<%= paginate @posts %></div>
+      <div class="pagechange">
+      <%= paginate @posts %></div>
 
     </div>
- 
-  </div>
 <% else %>
   <div class="center jumbotron">
     <div class="text-center">
