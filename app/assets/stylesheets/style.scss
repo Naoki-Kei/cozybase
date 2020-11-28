@@ -144,8 +144,19 @@ html{
 /*.postimg{  width:200px;*/
 /*    height:200px;}*/
     
- 
- 
+ /*新規投稿周り*/
+.item-label{
+    width:200px;
+}
+
+.item-label .require{
+    color: #dc3c36;
+}
+
+.item-label span{
+    font-size:0.6em;
+    color:rgba(68,51,17,.35);
+}
     
 /*投稿周り*/
 #wrapper {

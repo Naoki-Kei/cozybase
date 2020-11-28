@@ -12,15 +12,19 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :image, '画像' %>
-    <%= form.file_field :image %>
-  </div>
-<div class="chapter-title">コメント</div>
-<%= form.text_area :self_comment, class: 'form-control', rows: 5 %>
-
-  <div class="actions">
-    <%= form.submit 'Post', class: 'btn btn-primary btn-block' %>
-  </div>
-
+<div class="table">
+  <table class="table table-bordered table-sm">
+    <tr>
+    <td class="item-label"><span class="require">※必須</span><br>画像<br><span class="attention">画像形式：jpeg,jpg,png<br>容量：5MB</span></td>
+    <td><%= form.file_field :image %></td>
+    </tr>
+    <tr>
+    <td><div class="item-label"><span class="require">※必須</span><br>コメント</div></td>
+    <td> <%= form.text_area :self_comment, class: 'form-control', rows: 5 %></td>
+   </tr>
+   </table>
+    <div class="actions">
+      <%= form.submit 'Post', class: 'btn btn-primary btn-block' %>
+    </div>
+</div>
 <% end %>
