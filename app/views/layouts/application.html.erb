@@ -6,10 +6,13 @@
     <title>Cozybase</title>
       <%= csrf_meta_tags %>
       <%= csp_meta_tag %>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-
-    <%= stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css">
+    
+     <%= stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
@@ -23,14 +26,44 @@
     <div class="topimage"> <p>みんなのリアルな家の働き方・働く場所のSNS自分のお気に入りの働く場所、工夫を共有して自分の空間をさらにカスタマイズしよう！</p></div>  
 
     <div class="container">
-      <%= render 'layouts/flash_messages' %>
+    
       <div class="wrap">
+          <%= render 'layouts/flash_messages' %>
         <%= yield %>
       </div>
     </div>
+    <div class="lastcontents">
+      <p>最新のおすすめ情報を配信中♪</p>
+      <ul class="follow-me">
+      <li><a href="https://twitter.com"></a></li>
+      <li><a href="https://www.facebook.com"></a></li>
+      <li><a href="https://plus.google.com"></a></li>
+      <li><a href="https://www.tumblr.com"></a></li>
+      </ul>
+    </div>
     <footer>
-      <div class="fotternav"></div>
+      <div class="fotternav">
+      <div id="copyright">
+        Copyright &copy; 2021- Cozybase All Rights Reserved.
+      </div>
+      </div>
     </footer>
-    
+  
+  
+  
+  <!-- まずjQuery -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+  <!-- Popper.js, 次に Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <!-- その他のライブラリのJavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+  
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  
+ 
   </body>
 </html>

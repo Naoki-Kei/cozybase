@@ -1,4 +1,6 @@
 @charset "utf-8";
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
+@import url(https://fonts.googleapis.com/css?family=Vollkorn|Roboto);
 
 
 a{color:#06f;text-decoration: none;}
@@ -15,7 +17,365 @@ html{
   line-height: 1.5;
 }
 
+/*nav*/
 
+
+
+/*タイトル*/
+.top_movie video{
+  height: auto;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*縮めた時に出てくるメニュー*/
+.small_menu {
+  width: 100%;
+  padding: 20px;
+  background-color: #000044;
+  color: white;
+  font-size: 25px;
+}
+.small_menu {
+  text-align: left;
+  vertical-align: middle;
+}
+
+/*フォームのデザイン*/
+.input_container {
+  position: absolute;
+  background-color: white;
+  opacity: 0.8;
+  margin: 0 auto;
+  color: black;
+}
+.input-title {
+    text-align:center;
+}
+
+.input_container h1 {
+  width: 80%;
+  margin: 0 auto 20px auto;
+}
+.input_container h2 {
+  font-size: 20px;
+  color: #666666;
+  width: 80%;
+  margin: 0 auto 20px auto;
+}
+.input_container p {
+  font-size: 15px;
+}
+
+.input_form{
+    text-align:center;
+}
+
+.submit_button {
+  padding: 10px 0 10px 0;
+  width: 80%;
+  background-color: #f12d1e;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border:none;
+}
+.submit_button:hover {
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+.input_button {
+  padding: 10px 0px 0px 10px;
+  margin-bottom: 10px;
+  width: 80%;
+}
+
+.button_label {
+  width: 80%;
+  text-align: left;
+}
+
+
+/*メインコンテンツ*/
+.main_content {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.bottom-line {
+  border-bottom: solid 1px #f12d1e;
+}
+
+/*紹介文*/
+.content_introduction {
+  font-size: 70px;
+  margin: 70px auto;
+  text-align:center;
+}
+
+/*Cozybaseの魅力*/
+.attraction_title {
+  font-size: 30px;
+  margin: 30px 0 40px 0;
+  font-weight: 900;
+  text-align:center;
+}
+
+.attraction {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.attraction_text1 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.attraction_text2 {
+  font-size: 18px;
+  color: #666666;
+}
+
+.contain {
+  margin: 10px auto 50px auto;
+  width: 100%;
+}
+
+.contain img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+}
+
+.row {
+  display: flex;
+}
+
+
+/*使い方*/
+.howtouse{
+    text-align:center;
+}
+ol {
+  counter-reset:number; /*数字をリセット*/
+  list-style-type: none!important; /*数字を一旦消す*/
+  width: 80%;
+  margin: 0 auto;
+}
+ol li {
+  position: relative;
+  line-height: 2em;
+  padding: 0 0.5em 0.5em 0px;
+  font-size: 25px;
+}
+
+ol li:before{
+  /* 以下数字をつける */
+  position: absolute;
+  counter-increment: number;
+  content: counter(number);
+  /*以下数字のデザイン変える*/
+  display:inline-block;
+  background: #f12d1e;
+  color: white;
+  font-family: 'Avenir','Arial Black','Arial',sans-serif;
+  font-weight:bold;
+  font-size: 25px;
+  border-radius: 50%;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  line-height: 52px;
+  text-align: center;
+  /*以下 上下中央寄せのため*/
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/*レマインド登録ボタン*/
+.remind {
+  background-color: #f12d1e;
+  margin: 40px auto 40px auto;
+  padding: 15px;
+  border: none;
+  width: 40%;
+  color: white;
+  cursor: pointer;
+  text-align:center;
+}
+.remind:hover {
+  opacity: 0.7;
+  /*background-color: #3399FF;*/
+  transition: 0.3s;
+}
+
+/*最後の締めの言葉*/
+.last_message {
+  font-size: 40px;
+  text-align:center;
+}
+
+.last_image img{
+  width: 80%;
+  height: auto;
+}
+
+/*フラッシュ文*/
+.alert {
+  position: absolute;
+  top: 56px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+}
+/*フッター*/
+
+.lastcontents{
+  width:100%;
+  height:150px;
+  margin: 0 auto;
+  background: #f6f5f4;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.lastcontents p{
+  color: #431;
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+.follow-me {
+  list-style: none;
+  margin: 0 0 -8px;
+  overflow: hidden;
+  padding: 0;
+}
+.follow-me li {
+  float: left;
+  margin: 0 8px 8px 0;
+  padding: 0;
+}
+.follow-me li a::before {
+  background-color: #fff;
+  border-style: solid;
+  border-width: 1px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  color: #fff;
+  display: inline-block;
+  font-family: FontAwesome;
+  font-size: 16px;
+  height: 42px; /* Button height */
+  line-height: 42px; /* Button height */
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  text-align: center;
+  width: 42px; /* Button width */
+}
+.follow-me li a[href*="amazon.co.jp"]::before,
+.follow-me li a[href*="amazon.com"]::before         { border-color: #ff9900; color: #ff9900; content: "\f270"; }
+.follow-me li a[href*="codepen.io"]::before         { border-color: #000000; color: #000000; content: "\f1cb"; }
+.follow-me li a[href*="delicious.com"]::before      { border-color: #3399ff; color: #3399ff; content: "\f1a5"; }
+.follow-me li a[href*="deviantart.com"]::before     { border-color: #05cc47; color: #05cc47; content: "\f1bd"; }
+.follow-me li a[href*="digg.com"]::before           { border-color: #000000; color: #000000; content: "\f1a6"; }
+.follow-me li a[href*="dribble.com"]::before        { border-color: #000000; color: #ea4c89; content: "\f17d"; }
+.follow-me li a[href*="dropbox.com"]::before        { border-color: #007ee5; color: #007ee5; content: "\f16b"; }
+.follow-me li a[href*="facebook.com"]::before       { border-color: #3b5998; color: #3b5998; content: "\f09a"; }
+.follow-me li a[href*="feedly.com"]::before         { border-color: #6cc655; color: #6cc655; content: "\f09e"; }
+.follow-me li a[href*="flickr.com"]::before         { border-color: #0063cc; color: #0063dc; content: "\f16e"; }
+.follow-me li a[href*="foursquare.com"]::before     { border-color: #f94877; color: #f94877; content: "\f180"; }
+.follow-me li a[href*="github.com"]::before         { border-color: #181717; color: #181717; content: "\f09b"; }
+.follow-me li a[href*="plus.google.com"]::before    { border-color: #dc4e41; color: #dc4e41; content: "\f0d5"; }
+.follow-me li a[href*="b.hatena.ne.jp"]::before     { border-color: #008fde; color: #008fde; content: "\f027"; font-family: blogicon; }
+.follow-me li a[href*="instagram.com"]::before      { border-color: #125688; color: #125688; content: "\f16d"; }
+.follow-me li a[href*="last.fm"]::before            { border-color: #d51007; color: #d51007; content: "\f202"; }
+.follow-me li a[href*="linkedin.com"]::before       { border-color: #0077b5; color: #0077b5; content: "\f0e1"; }
+.follow-me li a[href*="nicovideo.jp"]::before       { border-color: #eaeaea; color: #eaeaea; content: "\f047"; font-family: blogicon; }
+.follow-me li a[href*="pinterest.com"]::before      { border-color: #bd081c; color: #bd081c; content: "\f0d2"; }
+.follow-me li a[href*="getpocket.com"]::before      { border-color: #ef3f56; color: #ef3f56; content: "\f265"; }
+.follow-me li a[href*="reddit.com"]::before         { border-color: #ff4500; color: #ff4500; content: "\f1a1"; }
+.follow-me li a[href*="skype.com"]::before,
+.follow-me li a[href*="skype:"]::before             { border-color: #00aff0; color: #00aff0; content: "\f17e"; }
+.follow-me li a[href*="slideshare.net"]::before     { border-color: #2d2d2d; color: #2d2d2d; content: "\f1e7"; }
+.follow-me li a[href*="spotify.com"]::before        { border-color: #84bd00; color: #84bd00; content: "\f1bc"; }
+.follow-me li a[href*="steamcommunity.com"]::before { border-color: #171a21; color: #171a21; content: "\f1b6"; }
+.follow-me li a[href*="stumbleupon.com"]::before    { border-color: #eb4929; color: #eb4929; content: "\f1a4"; }
+.follow-me li a[href*="tumblr.com"]::before         { border-color: #36465d; color: #36465d; content: "\f173"; }
+.follow-me li a[href*="twitch.tv"]::before          { border-color: #6441a5; color: #6441a5; content: "\f1e8"; }
+.follow-me li a[href*="twitter.com"]::before        { border-color: #55acee; color: #55acee; content: "\f099"; }
+.follow-me li a[href*="vimeo.com"]::before          { border-color: #1ab7ea; color: #1ab7ea; content: "\f27d"; }
+.follow-me li a[href*="vine.co"]::before            { border-color: #11b58a; color: #11b58a; content: "\f1ca"; }
+.follow-me li a[href*="weibo.com"]::before          { border-color: #e6162d; color: #e6162d; content: "\f18a"; }
+.follow-me li a[href*="whatsapp.com"]::before       { border-color: #64d548; color: #64d548; content: "\f232"; }
+.follow-me li a[href*="wordpress.com"]::before,
+.follow-me li a[href*="wordpress.org"]::before      { border-color: #21759b; color: #21759b; content: "\f19a"; }
+.follow-me li a[href*="youtube.com"]::before        { border-color: #cd201f; color: #cd201f; content: "\f16a"; }
+.follow-me li a[href$="/feed"]::before              { border-color: #ffa500; color: #ffa500; content: "\f09e"; }
+.follow-me li a[href$="/subscribe"]::before         { border-color: #363636; color: #363636; content: "\f000"; font-family: blogicon; }
+.follow-me li a:hover::before {
+  color: #fff;
+}
+.follow-me li a[href*="amazon.co.jp"]:hover::before,
+.follow-me li a[href*="amazon.com"]:hover::before         { background-color: #ff9900; }
+.follow-me li a[href*="codepen.io"]:hover::before         { background-color: #000000; }
+.follow-me li a[href*="delicious.com"]:hover::before      { background-color: #3399ff; }
+.follow-me li a[href*="deviantart.com"]:hover::before     { background-color: #05cc47; }
+.follow-me li a[href*="digg.com"]:hover::before           { background-color: #000000; }
+.follow-me li a[href*="dribble.com"]:hover::before        { background-color: #ea4c89; }
+.follow-me li a[href*="dropbox.com"]:hover::before        { background-color: #007ee5; }
+.follow-me li a[href*="facebook.com"]:hover::before       { background-color: #3b5998; }
+.follow-me li a[href*="feedly.com"]:hover::before         { background-color: #6cc655; }
+.follow-me li a[href*="flickr.com"]:hover::before         { background-color: #0063dc; }
+.follow-me li a[href*="foursquare.com"]:hover::before     { background-color: #f94877; }
+.follow-me li a[href*="github.com"]:hover::before         { background-color: #181717; }
+.follow-me li a[href*="plus.google.com"]:hover::before    { background-color: #dc4e41; }
+.follow-me li a[href*="b.hatena.ne.jp"]:hover::before     { background-color: #008fde; }
+.follow-me li a[href*="instagram.com"]:hover::before      { background-color: #125688; }
+.follow-me li a[href*="last.fm"]:hover::before            { background-color: #d51007; }
+.follow-me li a[href*="linkedin.com"]:hover::before       { background-color: #0077b5; }
+.follow-me li a[href*="nicovideo.jp"]:hover::before       { background-color: #eaeaea; }
+.follow-me li a[href*="pinterest.com"]:hover::before      { background-color: #bd081c; }
+.follow-me li a[href*="getpocket.com"]:hover::before      { background-color: #ef3f56; }
+.follow-me li a[href*="reddit.com"]:hover::before         { background-color: #ff4500; }
+.follow-me li a[href*="skype.com"]:hover::before,
+.follow-me li a[href*="skype:"]:hover::before             { background-color: #00aff0; }
+.follow-me li a[href*="slideshare.net"]:hover::before     { background-color: #2d2d2d; }
+.follow-me li a[href*="spotify.com"]:hover::before        { background-color: #84bd00; }
+.follow-me li a[href*="steamcommunity.com"]:hover::before { background-color: #171a21; }
+.follow-me li a[href*="stumbleupon.com"]:hover::before    { background-color: #eb4929; }
+.follow-me li a[href*="tumblr.com"]:hover::before         { background-color: #36465d; }
+.follow-me li a[href*="twitch.tv"]:hover::before          { background-color: #6441a5; }
+.follow-me li a[href*="twitter.com"]:hover::before        { background-color: #55acee; }
+.follow-me li a[href*="vimeo.com"]:hover::before          { background-color: #1ab7ea; }
+.follow-me li a[href*="vine.co"]:hover::before            { background-color: #11b58a; }
+.follow-me li a[href*="weibo.com"]:hover::before          { background-color: #e6162d; }
+.follow-me li a[href*="whatsapp.com"]:hover::before       { background-color: #64d548; }
+.follow-me li a[href*="wordpress.com"]:hover::before,
+.follow-me li a[href*="wordpress.org"]:hover::before      { background-color: #21759b; }
+.follow-me li a[href*="youtube.com"]:hover::before        { background-color: #cd201f; }
+.follow-me li a[href$="/feed"]:hover::before              { background-color: #ffa500; }
+.follow-me li a[href$="/subscribe"]:hover::before         { background-color: #363636; }
+
+/*フッター*/
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin: 80px auto 0 auto;
+  text-align:center;
+}
+
+
+
+
+
+
+
+/*もとからあるメニュー*/
 .btn-edit{
     color:#fff;
 }
@@ -395,4 +755,96 @@ html{
 
 .post-card-name{
     width:200px;
+}
+
+/*レスポンシブ対応*/
+@media screen and (min-width:500px) {
+  ol {
+  width: 100%;
+  margin: 0 auto;
+  }
+  .input_container {
+  position: relative;
+  top: 50px;
+  }
+  .input_container h1,.input_container h2 {
+  display: none;
+  }
+  .top_introduction h1 {
+  font-size: 30px;
+  }
+  .content_introduction {
+  font-size: 30px;
+  }  
+  .area_image {
+  display: inline-block;
+  width:50%;
+  }
+  .last_message {
+  font-size: 25px;
+  }
+  .row {
+  flex-direction: column;
+ }
+ .box2 {order: 1}
+ .box1 {order: 2}
+}
+@media screen and (min-width:768px) {
+  .top_movie video{
+  display: block;
+  }
+  .small_menu {
+    display: none;
+  }
+  .input_container h1,.input_container h2 {
+  display: block;
+  }
+  .input_container {
+  position: absolute;
+  top: 140px;
+  left: 0;
+  right: 0;
+  width: 80%;
+  border-radius: 10px;
+  padding: 40px 50px 40px 50px;
+  }
+   .top_introduction video{
+  display: block;
+  }
+  ol {
+  width: 60%;
+  margin: 0 auto;
+  }
+  .top_introduction h1 {
+  font-size: 30px;
+  font-weight: bold;
+  }
+  .content_introduction {
+  font-size: 35px;
+  }  
+  .area_image {
+  display: inline-block;
+  width:33.3333333%;
+  }
+  .last_message {
+  font-size: 40px;
+  }
+  .row {
+  flex-direction: row;
+ }
+ .box1 {order: 1}
+ .box2 {order: 2}
+}
+@media screen and (min-width:1024px) {
+  .area_image {
+  display: inline-block;
+  width:33.3333333%;
+  }
+  .input_container {
+  position: absolute;
+  top: 250px;
+  margin-left: 180px;
+  width: 40%;
+  height: 85%;
+  }
 }

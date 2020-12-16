@@ -2,8 +2,10 @@ class UsersController < ApplicationController
   before_action :require_user_logged_in, only: [:index, :show, :followings, :followers]
 
   def index
-    @users = User.order(id: :desc).page(params[:page]).per(10)
-  
+   
+      
+      @users = User.order(id: :desc).page(params[:page]).per(10)
+
   end
 
   def show
@@ -25,7 +27,10 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
-    
+     if logged_in?
+        @post = current_user.posts.build
+        @posts = Post.all.page(params[:page]).per(12)
+     end
   end
 
   def create

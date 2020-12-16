@@ -1,0 +1,21 @@
+<% if logged_in? %>
+    <div class="toparea"></div>
+    <div>
+      <%= render 'posts/top', posts: @posts %>
+      <div class="pagechange">
+        <%= paginate @posts %>
+      </div>
+    </div>
+<% else %>
+    <!--トップページ動画背景再生-->
+    <div class="video-wrap">
+      <video src="assets/bathL.mp4" autoplay loop muted>></video>
+    </div>
+
+    <div class="center jumbotron">
+      <div class="text-center">
+        <h1>Welcome to the CosyBase</h1>
+        <%= link_to 'Sign up now!', signup_path, class: 'btn btn-lg btn-primary' %>
+      </div>
+    </div>
+<% end %>

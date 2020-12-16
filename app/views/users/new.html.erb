@@ -1,34 +1,94 @@
-<div class="text-center">
-  <h1>無料登録</h1>
+<% if logged_in? %>
+<div class="toparea"></div>
+  <%= render 'posts/top', posts: @posts %>
+<% else %>
+
+<!--ビデオ再生-->
+<div class="top_movie">
+<video src="assets/bathL.mp4" class="top__video" autoplay muted loop playsinline></video>
 </div>
 
-<div class="row">
-  <div class="col-sm-6 offset-sm-3">
-
-    <%= form_with(model: @user, local: true) do |f| %>
-    <%= render 'layouts/error_messages', model: f.object %>
-      
-      <div class="form-group">
-        <%= f.label :name, 'ニックネーム' %>
-        <%= f.text_field :name, class: 'form-control' %>
-      </div>
-
-      <div class="form-group">
-        <%= f.label :email, 'Email' %>
-        <%= f.email_field :email, class: 'form-control' %>
-      </div>
-
-      <div class="form-group">
-        <%= f.label :password, 'Password' %>
-        <%= f.password_field :password, class: 'form-control' %>
-      </div>
-
-      <div class="form-group">
-        <%= f.label :password_confirmation, 'Confirmation' %>
-        <%= f.password_field :password_confirmation, class: 'form-control' %>
-      </div>
-
-      <%= f.submit 'Sign up', class: 'btn btn-primary btn-block' %>
-    <% end %>
+<div class="input_container">
+  <div class="input-title">
+  <h1>新しいカタチのイエ</h1>
+  <h2>住まい、働く場所としてのイエのSNS</h2>
+  </div>
+  <div class="input_form" name="register">
+  <%= form_with(model:@user, local:true) do |f| %>
+  <%= f.label :name, "ニックネーム：", class:"button_label" %>
+  <%= f.text_field :name, class:"input_button" %>
+  <%= f.label :email, "メールアドレス", class:"button_label" %>
+  <%= f.email_field :email, class:"input_button" %>
+  <%= f.label :password, "パスワード：", class:"button_label" %>
+  <%= f.password_field :password, class:"input_button" %>
+  <%= f.label :password_confirmation, "パスワードの確認：", class:"button_label" %>
+  <%= f.password_field :password_confirmation, class:"input_button" %>
+  <%= f.submit "新規登録", class:"submit_button" %>
+  <p>アカウントをお持ちですか？<%= link_to "ログイン", login_path %></p>
+  <% end %>
   </div>
 </div>
+
+
+<div class="main_content">
+  <div class="content_introduction animated fadein">
+    Cozybaseは快適な新しいイエ・ヘヤを<br>創り上げるためのみんなのSNSです
+  </div>
+  <div class="attraction_title animated fadein">
+    <span class="bottom-line">Cozybaseでできること</span>
+  </div>
+  <div class="attraction">
+    <div class="contain animated fadein">  
+      <div class="row">
+        <div class="col-sm-6">
+          <img src="<%= asset_path "top_image01.jpg" %>" alt="快適な空間" />
+        </div>
+        <div class="col-sm-6 attraction_text">
+          <p class="attraction_text1">おウチを素敵に変える工夫や商品情報が満載♪</p>
+            <p class="attraction_text2">
+              「このインテリアおすすめ」「仕事をするならこのお店の机がオススメ」「子どもと一緒に遊べるへの工夫」など
+              自分のアイデアの共有や日本全国のみんなの工夫を取り入れることができます。
+           </p>
+        </div>
+      </div>
+    </div>
+    <div class="contain animated fadein">  
+      <div class="row"> 
+        <div class="col-sm-6 box1 attraction_text">
+          <p class="attraction_text1">自分だけのインテリア写真集</p>
+            <p class="attraction_text2">
+              友達のおウチやショールームに行きづらい中、Cozybaseならいつでも手軽にみんなのおウチを見れる、
+              気になったヘヤはお気に入り登録して自分だけの写真集に。
+            </p>
+        </div>
+        <div class="col-sm-6 box2">
+          <img src="<%= asset_path "top_image02.jpg" %>" alt="家族との団らん" />
+        </div>
+      </div>
+    </div>
+    <!--Cozybaseの使い方-->
+    <div class="attraction_title animated fadein">
+      <span class="bottom-line">Cozybaseの使い方</span>
+    </div>
+    <!--使い方ステップ-->
+    <div class="howtouse">
+    <ol>
+      <li class="animated fadein">アカウント作成</li>
+      <li class="animated fadein">みんなのヘヤの写真を見る</li>
+      <li class="animated fadein">コメントを残してみよう</li>
+    </ol>
+    </div>
+    <!--再度、登録を促す-->
+    <div href="#register" class="remind">今すぐ登録する</div>
+  
+    <!--最後の締めの言葉-->
+    <div class="last_message animated fadein">
+      <p>New Normalなみんなのイエ・ヘヤを<br>手軽に、気軽にを覗いてみよう</p>
+    </div>
+    
+    
+  </div><!-- attraction END -->
+
+</div> <!-- main_content END -->
+
+<% end %>
